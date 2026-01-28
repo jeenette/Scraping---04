@@ -1,0 +1,41 @@
+# selenium
+# beautifulsoup4
+# pandas
+
+
+Technical Assignment: Web Scraping and Automated Data Extraction
+Objective
+This assignment is designed to transition interns from theoretical programming to practical data engineering. The project focuses on building a resilient data pipeline using Selenium for browser automation and BeautifulSoup for document parsing. By the end of this project, you should demonstrate the ability to navigate dynamic web environments and extract structured data for analysis.
+Phase 1: Research and Ethical Compliance
+Before any development begins, you must perform a technical and ethical audit of your target source.
+●	Site Selection: Identify a target website (e.g., a real estate aggregator, a public news archive, or a specialized sandbox such as Scrape This Site).
+●	The robots.txt Audit: Navigate to [domain].com/robots.txt and identify which paths are restricted.
+●	Proposal: Draft a brief summary (2-3 paragraphs) outlining the data points to be captured, the site's pagination structure, and why Selenium is necessary (e.g., the presence of JavaScript-rendered content).
+Phase 2: Environment Configuration
+Professional-grade scrapers require isolated environments to ensure reproducibility.
+●	Environment Management: Initialize a virtual environment using venv or conda.
+●	Dependency Installation: Install selenium, beautifulsoup4, pandas, and the appropriate webdriver (e.g., ChromeDriver).
+●	The Hybrid Workflow: You are required to implement a "hybrid" approach. Use Selenium to manage the browser session and render the DOM, then pass the final page_source to BeautifulSoup for high-speed parsing.
+ 
+Phase 3: Technical Implementation Requirements
+Your script must handle the following common challenges of web-based data collection:
+1.	Explicit Wait Logic: Avoid using time.sleep(). Implement WebDriverWait to ensure elements are present and interactable before the script proceeds.
+2.	Navigation Handling: Successfully implement logic for either multi-page pagination or infinite scrolling.
+3.	Exception Handling: Integrate try-except blocks to manage common errors such as TimeoutException or NoSuchElementException.
+4.	User-Agent Mocking: Configure driver options to include a standard User-Agent header to mimic a legitimate browser session.
+Phase 4: Standard Project Structure
+To ensure code maintainability, follow the directory structure provided below. All logic must be modularized.
+web_scraper_project/
+├── data/
+│   ├── raw/                # Unprocessed output from the initial scrape
+│   └── processed/          # Cleaned datasets ready for analysis
+├── logs/                   # Log files generated during script execution
+├── src/                    # Source code directory
+│   ├── __init__.py
+│   ├── engine.py           # Selenium driver setup and navigation logic
+│   ├── parser.py           # BeautifulSoup functions for extracting specific tags
+│   └── utils.py            # Helper functions for text cleaning and file I/O
+├── .gitignore              # Files to exclude (venv, logs, .env)
+├── README.md               # Documentation and execution instructions
+├── requirements.txt        # Project dependencies
+└── main.py                 # The orchestrator script that runs the pipelin
