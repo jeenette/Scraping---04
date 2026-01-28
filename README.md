@@ -20,18 +20,31 @@ Status
 
 # PROJECT STRUCTURED
 web_scraper_project/
+
 ├── data/
+
 │   ├── raw/          # Unprocessed output from initial scrape
+
 │   └── processed/    # Cleaned datasets ready for analysis
+
 ├── logs/             # Logs for script execution (future use)
+
 ├── src/
+
 │   ├── __init__.py
+
 │   ├── engine.py     # Selenium driver setup and navigation (future use)
+
 │   ├── parser.py     # BeautifulSoup parsing functions
+
 │   └── utils.py      # Helper functions (optional)
+
 ├── main.py           # Orchestrates scraping pipeline
+
 ├── scraper_test.py   # Requests + BeautifulSoup test scraper
+
 ├── requirements.txt  # Dependencies
+
 └── README.md         # This file
 
 
@@ -40,6 +53,7 @@ web_scraper_project/
 1. Clone the repository and navigate to the project folder:
 
 git clone https://github.com/jeenette/Scraping---04.git
+
 cd web_scraper_project
 
 
